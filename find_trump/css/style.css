@@ -1,0 +1,104 @@
+/* Font face declaration */
+@font-face {
+  font-family: "Optima";
+  src: url("/find_trump/public/font/Optima\ ExtraBlack.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Reset styles for html and body */
+html,body{
+  height:100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body background image */
+body{
+  background:url(../public/images/fruits.jpg)no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Styling for main heading */
+h1{
+  font-weight: bold; /* Make text bold */
+  font-size: 5rem;
+  font-family: "Optima";
+  text-align: center; /* Center align text */
+  margin-top: 5%; /* Add top margin */
+  padding: 0.5em; /* Add padding equivalent to font size */
+}
+
+/* Neon effect for headings */
+.neonH{
+  animation: flicker 1.5s infinite alternate; /* Apply flickering animation */
+  color: rgb(25, 235, 238); /* Set text color to white */
+}
+
+/* Flickering animation keyframes */
+@keyframes flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+      text-shadow:
+      0 0 4px #fff,
+      0 0 11px #fff,
+      0 0 19px #fff,
+      0 0 40px #0fdbf2,
+      0 0 80px #0fdbf2,
+      0 0 90px #0fdbf2,
+      0 0 100px #0fdbf2,
+      0 0 150px #0fdbf2;
+  }
+  20%, 24%, 55% {        
+      text-shadow: none;
+  } 
+}
+
+/* Styling for images */
+img{
+  width:5%; /* Set width */
+  position: absolute; /* Position absolute */
+  cursor: pointer; /* Set cursor to pointer */
+}
+
+/* Styling for links */
+a {
+  text-decoration: none; /* Remove underline */
+}
+
+/* Neon effect for links */
+.neon-link{
+  font-size: 1.5rem;
+  padding: 10px 20px; /* Button padding */
+  background-color: transparent; /* Transparent background */
+  border: 2px solid white; /* White border */
+  border-radius: 20px; /* Border radius */
+  cursor: pointer; /* Pointer cursor */
+  position: relative; /* Relative position */
+  animation: flicker 1.5s infinite alternate; /* Apply flickering animation */
+  color: #fff; /* White text color */
+  margin: 0 10px; /* Horizontal margin */
+  position: fixed; /* Fixed position */
+  bottom: 50px; /* Bottom position */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Center horizontally */
+}
+
+/* Media query for tablets */
+@media screen and (max-width: 1024px) {
+  h1 {
+      font-size: 4rem; /* Reduce font size */
+  }
+  img{
+      width:10%; /* Increase image width */
+  }
+}
+
+/* Media query for mobile phones */
+@media screen and (max-width: 768px) {
+  h1 {
+      font-size: 2rem; /* Reduce font size */
+  }
+  img{
+      width:15%; /* Increase image width */
+  }
+}

@@ -1,0 +1,134 @@
+@font-face {
+    font-family: "Muro";
+    src: url("/shifumi/public/font/Muroslant.otf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+html,body{
+    text-align: center;
+    background-color: red;
+}
+
+/* Styles for the header image */
+.header img{
+    width:  20rem;
+    height: auto;
+}
+
+/* Styles for headings */
+h1,h2,h3{
+    font-family: "muro";
+    color: white;
+}
+
+/* Styles for buttons and computer choice */
+button, .computer-choice {
+    background-color: #FFC100;
+    border-radius: 20px;
+    padding: 10px;
+    cursor: pointer;
+    display: inline-flex; /* Utilisation de flexbox */
+    justify-content: center; /* Centrage horizontal */
+    align-items: center; /* Centrage vertical */
+    width: 5rem;
+    height: 5rem;
+    box-sizing: border-box;
+}
+
+/* Styles for SVG icons inside buttons */
+button svg{
+    height: 3rem;
+}
+
+/* Styles for images */
+img {
+    height: 3rem;
+}
+
+/* Hide SVG icons inside computer choice element */
+.computer-choice svg{
+    display:none;
+}
+
+/* Hide images inside computer choice element */
+.computer-choice img{
+    display:none;
+}
+
+/* Animation for spinning effect */
+@keyframes spin {
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
+
+/* Apply spinning animation to computer choice element */
+.computer-choice{
+    animation: spin 1s linear infinite;
+}
+
+/* Stop spinning animation */
+.computer-choice.stop-spinning{
+    animation: none;
+}
+
+/* Styles for links */
+a {
+    text-decoration: none; /* Remove underline */
+}
+
+/* Neon link styles */
+.neon-link {
+    font-size: 1.5rem;
+    padding: 10px 20px; /* Button's inner padding */
+    background-color: transparent; /* Transparent background color */
+    border: 2px solid white; /* White border of 2px */
+    border-radius: 20px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    position: relative; /* Position relative for light effect */
+    animation: flicker 1.5s infinite alternate; /* Neon flickering effect */
+    color: #fff; /* White text color */
+    margin: 0 10px; /* Horizontal margin between buttons */
+    position: fixed; /* Fixed position */
+    bottom: 50px; /* Adjust as needed */
+    left: 50%; /* Horizontally center */
+    transform: translateX(-50%); /* Horizontally center */
+}
+
+/* Flickering animation */
+@keyframes flicker {
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+        text-shadow:
+        0 0 4px #fff,
+        0 0 11px #fff,
+        0 0 19px #fff,
+        0 0 40px #0fdbf2,
+        0 0 80px #0fdbf2,
+        0 0 90px #0fdbf2,
+        0 0 100px #0fdbf2,
+        0 0 150px #0fdbf2;
+    }
+    20%, 24%, 55% {        
+        text-shadow: none;
+    }    
+}
+
+/* Media query for small screens */
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 1rem; /* Font size of 1rem for mobile phones */
+    }
+    h2,h3 {
+        font-size: 0.8rem; /* Font size of 0.8rem for mobile phones */
+    }
+    button, .computer-choice {
+        width: 3rem; /* Width of 3rem for buttons and computer choice */
+        height: 3rem; /* Height of 3rem for buttons and computer choice */
+    }
+    button svg{
+        height: 2rem; /* Height of 2rem for SVG icons inside buttons */
+    }
+    img {
+        height: 2rem; /* Height of 2rem for images */
+    }
+}
