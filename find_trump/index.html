@@ -11,11 +11,17 @@
 
 <body>
     <!-- Heading with neon effect -->
-    <h1 class="neonH">Mais où est Trumpy?</h1>
+    <div class="title">
+        <h1 class="neonH">Mais où est Trumpy?</h1>
+    </div>
+    
     <!-- Image of Trumpy with onclick event to trigger the 'found' function -->
-    <img src="/find_trump/public/images/trumpy.png" alt="trump" onclick="found()">
+    <img src="/find_trump/public/images/trumpy.png" id="trumpyFace" alt="trump" onclick="found()">
+    <audio id="win" preload="auto">
+        <source src="/find_trump/public/son/bravo.ogg" type="audio/ogg">
+    </audio>
     <!-- Link to go back to the index page with neon effect -->
-    <a href="/index.html" class="neon-link">Back</a>
+    <a href="/index.html" class="neon-link">Retour</a>
     <!-- Script file for the game functionality -->
     <script src="/find_trump/scripts/trumpyGame.js"></script>
 </body>

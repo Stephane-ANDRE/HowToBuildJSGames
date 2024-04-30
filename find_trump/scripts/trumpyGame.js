@@ -3,8 +3,12 @@ function found(){
     // Calculate the time taken to find Trumpy
     const findTime = new Date().getTime() - window.startTime;
     const findSeconds = findTime / 1000;
+     // Play the sound
+     const winSound = document.getElementById("win");
+     winSound.play();
     // Display a congratulatory message with the time taken
     alert("Super ! Tu as trouvé Trumpy en " + findSeconds + " secondes!");
+   
     // Start a new game
     newGame();
 }
@@ -20,8 +24,8 @@ function newGame () {
     const x = Math.round(Math.random() * maxX);
     const y = Math.round(Math.random() * maxY);
     // Set the position of Trumpy's image
-    document.querySelector("img").style.top = y + "px";
-    document.querySelector("img").style.left = x + "px";
+    document.getElementById("trumpyFace").style.top = y + "px";
+    document.getElementById("trumpyFace").style.left = x + "px";
 }
 
 // Start a new game when the page loads

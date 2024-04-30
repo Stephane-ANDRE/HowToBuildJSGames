@@ -25,6 +25,9 @@ function MyChoiceIs(userChoice) {
         document.querySelector('.result').innerText = 'Egalité ! 🥸';
     } else if (outcomes[userChoice].includes(computerChoice)) {
         document.querySelector('.result').innerText = '🎉 Tu as gagné !! Bravo 🎉';
+         // Play the sound
+    const winSound = document.getElementById("win");
+    winSound.play();
     } else {
         document.querySelector('.result').innerText = 'Perdu !🥲';
     }

@@ -48,6 +48,32 @@
         </svg>
     </button>
     <br />
+    <!-- Modale -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3>Rappel des règles :</h3>
+      <!-- Contenu de votre modale -->
+     
+        <ul>
+            <li>Les ciseaux coupent le papier</li>
+            <li>le papier bat la pierre</li>
+            <li>la pierre écrase le lézard</li>
+            <li>le lézard empoisonne Spock</li>
+            <li>Spock écrabouille les ciseaux</li>
+            <li>les ciseaux décapitent le lézard</li>
+            <li>le lézard mange le papier</li>
+            <li>le papier repousse Spock</li>
+            <li>Spock détruit la pierre</li>
+            <li>La pierre bat les ciseaux</li>
+
+        </ul>
+    </div>
+  </div>
+  
+  <!-- Contenu de la page -->
+  <h2 id="rules-header">Rappel des règles</h2>
+    <br/>
     <h2> Ordinateur:</h2>
     <div class="computer-choice">
         <svg class="rock" xmlns="http://www.w3.org/2000/svg"
@@ -74,10 +100,14 @@
 
     </div>
     <h3 class="result">Résultat:</h3>
+    <audio id="win" preload="auto">
+        <source src="/shifumi/public/sons/bravo.ogg" type="audio/ogg">
+    </audio>
 
     <a href="/index.html" class="neon-link">Retour</a>
 
     <script src="/shifumi/scripts/shifumi.js"></script>
+    <script src="/shifumi/scripts/modalRules.js"></script>
 </body>
 
 </html>

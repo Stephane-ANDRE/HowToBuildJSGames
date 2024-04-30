@@ -18,6 +18,15 @@ body{
   background:url(../public/images/fruits.jpg)no-repeat center center fixed;
   background-size: cover;
 }
+/* Styling for main heading */
+
+
+#trumpTitle {
+  position: absolute; /* Position absolute pour positionner l'image */
+  top: 50%; /* Aligner verticalement à 50% */
+  right: 5%; /* Aligner 5% depuis le bord droit */
+  transform: translate(0, -50%); /* Centrer verticalement */
+}
 
 /* Styling for main heading */
 h1{
@@ -28,6 +37,23 @@ h1{
   margin-top: 5%; /* Add top margin */
   padding: 0.5em; /* Add padding equivalent to font size */
 }
+
+/* CSS pour faire pivoter l'image */
+.trumpy-rotation {
+  animation: rotateTrumpy 2s linear infinite alternate;
+}
+
+/* Animation de rotation */
+@keyframes rotateTrumpy {
+  from {
+      transform: scaleX(1); /* Regarder à gauche */
+  }
+  to {
+      transform: scaleX(-1); /* Regarder à droite */
+  }
+}
+
+
 
 /* Neon effect for headings */
 .neonH{
