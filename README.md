@@ -1,4 +1,4 @@
-# JS GameShow
+# HowToBuildJSGames
 Bienvenue sur cette petite plateforme full HTML, CSS and JS
 
 ## Kesako ?
